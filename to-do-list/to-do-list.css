@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("todobackground.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+.to-do-list {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    user-select: none;
+}
+
+.inputrow {
+    display: flex;
+    margin: 20px;
+}
+
+.inputbox {
+    padding: 10px;
+
+    border: 2px solid;
+    border-radius: 10px;
+    flex: 85%;
+    border: 3px solid;
+
+}
+
+.title {
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+.addbox {
+    margin: 3px;
+    border: none;
+    flex: 15%;
+    border-radius: 15px;
+
+    background-image: linear-gradient(to right, rgb(129, 241, 251), rgb(246, 158, 235));
+    color: rgb(4, 4, 4);
+
+}
+
+.addbox:hover {
+    color: black;
+    background-image: linear-gradient(to right, rgb(227, 38, 202), rgb(1, 205, 224))
+}
+
+.itemsbox {
+    list-style-type: none;
+
+}
+
+.item {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(to right, rgb(255, 179, 192), skyblue, white);
+    font-size: larger;
+    margin: 6px;
+    font-size: 20px;
+    position: relative;
+    transition: 1s;
+
+
+}
+
+.item:hover {
+    background-image: linear-gradient(to right, rgb(255, 228, 178), rgb(148, 148, 248), white);
+
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    padding: 5px;
+    font-weight: bold;
+    height: inherit;
+    width: inherit;
+    transition: 2s;
+
+
+}
+
+.donebtn {
+    padding: 8px;
+    margin: 0px;
+    position: absolute;
+    right: 50px;
+    bottom: 3px;
+    border-radius: 5px;
+
+    background-image: linear-gradient(to right, rgb(129, 241, 251), rgb(246, 158, 235));
+
+}
+
+.close:hover {
+    background-color: rgb(183, 254, 230);
+    color: rgb(114, 102, 102);
+    cursor: pointer;
+
+    border-radius: 20px;
+
+
+}
+
+.strike {
+    position: relative;
+
+}
+
+.strike::after {
+    content: '';
+    position: absolute;
+    top: 1.6rem;
+    left: 0;
+    height: 4px;
+    animation: strike 1s linear forwards;
+    background: black;
+}
+
+@keyframes strike {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width:600px) {
+    .to-do-list {
+        width: 100%;
+    }
+}

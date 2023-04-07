@@ -1,0 +1,51 @@
+body {
+    background-image: url("calculator_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+h1 {
+    text-align: center;
+
+}
+
+button {
+
+    height: 50px;
+    width: 50px;
+    border: none;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: larger;
+    box-shadow: 3px 5px rgb(23, 23, 23);
+}
+
+#resbox {
+    border: 4px solid;
+    height: 50px;
+    border-radius: 10px;
+    text-align: right;
+    width: 280px;
+    font-size: 20px;
+    background-color: cornsilk;
+    box-shadow: 1px -3px rgb(0, 0, 0);
+}
+
+button:hover {
+    box-shadow: 2px 2px rgb(12, 12, 12);
+    transform: translateY(2px);
+    background-image: linear-gradient(to right, grey, white);
+    transition: 0.3s;
+}
+
+.calculator {
+    border: 5px solid;
+    width: 300px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 10px;
+    background-image: radial-gradient(rgb(167, 218, 238), orange);
+
+}
